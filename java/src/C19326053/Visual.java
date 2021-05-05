@@ -11,17 +11,15 @@ public abstract class Visual extends PApplet
 
 	private float[] bands;
 	private float[] smoothedBands;
+	private float[] lerpedBuffer;
 
 	private Minim minim;
-	private AudioInput ai;
 	private AudioPlayer ap;
 	private AudioBuffer ab;
 	private FFT fft;
 
 	private float amplitude  = 0;
 	private float smothedAmplitude = 0;
-
-	
 	
 	public void startMinim() 
 	{
@@ -31,7 +29,7 @@ public abstract class Visual extends PApplet
 
 		bands = new float[(int) log2(frameSize)];
   		smoothedBands = new float[bands.length];
-
+		lerpedBuffer = new float[bands.length];
 	}
 
 	float log2(float f) {
@@ -63,6 +61,14 @@ public abstract class Visual extends PApplet
 		smothedAmplitude = PApplet.lerp(smothedAmplitude, amplitude, 0.1f);
 	}
 
+	public void calculateLerpedBuffer()
+	{
+        for (int i = 0; i < ab.size(); i++)
+        {
+			lerpedBuffer[i] = ab.get(i);
+            lerpedBuffer[i] = PApplet.lerp(lerpedBuffer[i], ab.get(i), 0.1f);
+        }
+	}
 
 	protected void calculateFrequencyBands() {
 		for (int i = 0; i < bands.length; i++) {
@@ -75,14 +81,8 @@ public abstract class Visual extends PApplet
 			}
 			average /= (float) w;
 			bands[i] = average * 5.0f;
-			smoothedBands[i] = lerp(smoothedBands[i], bands[i], 0.05f);
+			smoothedBands[i] = lerp(smoothedBands[i], bands[i], 0.1f);
 		}
-	}
-
-	public void startListening()
-	{
-		ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
-		ab = ai.left;
 	}
 
 	public void loadAudio(String filename)
@@ -111,6 +111,10 @@ public abstract class Visual extends PApplet
 		return bands;
 	}
 
+	public void setBands(float[] bands) {
+		this.bands = bands;
+	}
+
 	public float[] getSmoothedBands() {
 		return smoothedBands;
 	}
@@ -119,13 +123,12 @@ public abstract class Visual extends PApplet
 		return minim;
 	}
 
-	public AudioInput getAudioInput() {
-		return ai;
-	}
-
-
 	public AudioBuffer getAudioBuffer() {
 		return ab;
+	}
+
+	public float[] getLerpedBuffer() {
+		return lerpedBuffer;
 	}
 
 	public float getAmplitude() {
@@ -138,5 +141,9 @@ public abstract class Visual extends PApplet
 
 	public AudioPlayer getAudioPlayer() {
 		return ap;
+	}
+
+	public FFT getFFT() {
+		return fft;
 	}
 }
