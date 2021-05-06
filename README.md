@@ -6,37 +6,37 @@ Student Number: C19326053
 
 # Description of the assignment
 
-This assignment is about music visualisation. I created 4 themes that responds to music.
+This assignment is about music visualisation. I created 4 themes that respond to music.
 
 # Instructions
 
 ## Control
 
-My assignment could be controlled with both keyboard and mouse. Keyboard SPACE controls the music start or pause. This could also control with the mouse click. In the menu area, I drawed a start/pause and a rewind button, and 4 buttons for every theme. Rewind and theme choose can only control by mouse click.
+My assignment could be controlled with both keyboard and mouse. Keyboard SPACE controls the music start or pause. This could also control with the mouse click. In the menu area, I drew a start/pause and a rewind button, and 4 buttons for every theme. Rewind and theme-choose can only control by mouse click.
 <img src="images/Menu.png" width="500"/>
 
 ## Themes
 
-- **Theme1**: Rotating flower. Flower rotate and the speed is corresponding to the the amplitude, and the length of petals is also respond with amplitude.
+- **Theme1**: Rotating flower. The flower rotates and the speed is corresponding to the amplitude, and the length of the petals is also responds with amplitude.
 <img src="images/Theme1.gif" width="500"/>
 
-- **Theme2**: Rotating polygons. Triangle with outer rectangle, pentagon, ..., tetradecagon. Each polygon has different colour and size. The rotate speed and the size is respond to the amplitude.
+- **Theme2**: Rotating polygons. Triangle with the outer rectangle, pentagon, ..., tetradecagon. Each polygon has different colour and size. The rotate speed and the size responds to the amplitude.
 <img src="images/Theme2.gif" width="500"/>
 
-- **Theme3**: Pitch-circles. This theme divides the music into 9 pitches, when the pitch is playing, the corresponding position generates a circle and the circle goes up.
+- **Theme3**: Pitch-circles. This theme divides the music into 9 pitches, when the pitch is playing, the corresponding position generates a circle and the circles go up.
 <img src="images/Theme3.gif" width="500"/>
 
-- **Theme4**: Raining. 7 group of different color bubbles generates respond to the amplitude. Bubbles goes down and swing left and right, look like raining.
+- **Theme4**: Snowing. 7 group of different color bubbles generates respond to the amplitude. Bubbles go down and swing left and right, looks like snow.
 <img src="images/Theme4.gif" width="500"/>
 
 # How it works
-I have 10 java files in the assignment: Main, MyVisual, Theme1 - 4, Circle, Bubble, Visual and VisualException. In the `Main.java`, it calls `MyVisual.java`, and the `MyVisual.java` calls other java files. The menu and basic settings, such as `loadAudio()`, `draw()`, etc, are in the `MyVisual.java` file. And all the control operation are running in `MyVisual.java`.
+I have 10 java files in the assignment: Main, MyVisual, Theme1 - 4, Circle, Bubble, Visual, and VisualException. In the `Main.java`, it calls `MyVisual.java`, and the `MyVisual.java` calls other java files. The menu and basic settings, such as `loadAudio()`, `draw()`, etc, are in the `MyVisual.java` file. And all the control operations are running in `MyVisual.java`.
 
 ## Theme 1
-There are two elements in this part, one is the outer border and another is the flower. The border is responds with audio buffer use `getAudioBuffer().get(i)`. And both length and rotate speed of petals in flower are respond to `getSmoothedAmplitude()`.
+There are two elements in this part, one is the outer border and another is the flower. The border is responds with audio buffer use `getAudioBuffer().get(i)`. And both length and rotate speed of petals in flower are responding to `getSmoothedAmplitude()`.
 
 ## Theme 2
-I use `cos()` and `sin()` in for loop to form polygons. The size and rotate speed is respond to `getSmoothedAmplitude()`. The outer polygons have faster rotate speed.
+I use `cos()` and `sin()` in for loop to form polygons. The size and rotate speed responds to `getSmoothedAmplitude()`. The outer polygons have a faster rotation speed.
 ```java
 for(int i = 3; i < 15 ; i++)
 {
@@ -58,7 +58,7 @@ for(int i = 3; i < 15 ; i++)
 ```
 
 ## Theme 3
-In this theme I use another file `Circle.java` to help me generate lots of circles. I create an `ArrayList` of circle first, and form new circle if the pitch voice is obvious. The circles goes up, and the size became small and small.
+In this theme, I use another file `Circle.java` to help me generate lots of circles. I create an `ArrayList` of the circle first and form a new circle if the pitch voice is obvious. The circles go up, and the size became small and small.
 
 ```java
 for(int i = 0 ; i < t3.getSmoothedBands().length ; i ++)
@@ -73,10 +73,10 @@ for(int i = 0 ; i < t3.getSmoothedBands().length ; i ++)
 ```
 
 ## Theme 4
-In this theme I use another file `Bubble.java` to help me generate lots of bubbles. I create an `ArrayList` of bubble first, and form new bubble if the music has voice. I use `getSmoothedBands()[1] > 0` to express this. Bubbles are appear at the top round point, and goes down, the x-coordinates is also changed randomly.
+In this theme, I use another file `Bubble.java` to help me generate lots of bubbles. I create an `ArrayList` of bubble first and form a new bubble if the music has a voice. I use `getSmoothedBands()[1] > 0` to express this. Bubbles appear at the top round point, and go down, the x-coordinates are also changed randomly.
 
 # What I am most proud of in the assignment
-I practiced a lot on concepts of Object Oriented during the assignment, now I understood how the object works in different classes. I'm proud of all my code is working and achieve the visual what I want. My favourate part of the assignment is the theme 3.
+I practiced a lot on concepts of Object Oriented during the assignment, now I understood how the object works in different classes. I'm proud of all my code is working and achieve the visual that I want. My favorite part of the assignment is theme 3.
 
 # Youtube video
 
