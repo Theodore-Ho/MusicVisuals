@@ -13,7 +13,7 @@ This assignment is about music visualisation. I created 4 themes that responds t
 ## Control
 
 My assignment could be controlled with both keyboard and mouse. Keyboard SPACE controls the music start or pause. This could also control with the mouse click. In the menu area, I drawed a start/pause and a rewind button, and 4 buttons for every theme. Rewind and theme choose can only control by mouse click.
-![An image](images/Menu.png)
+<img src="images/Menu.png" width="200"/>
 
 ## Themes
 
