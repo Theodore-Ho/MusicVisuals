@@ -58,8 +58,22 @@ for(int i = 3; i < 15 ; i++)
 ```
 
 ## Theme 3
+In this theme I use another file `Circle.java` to help me generate lots of circles. I create an `ArrayList` of circle first, and form new circle if the pitch voice is obvious. The circles goes up, and the size became small and small.
+
+```java
+for(int i = 0 ; i < t3.getSmoothedBands().length ; i ++)
+{
+    float color = map(i, 0, t3.getBands().length, 255, 0);
+    if(t3.getBands()[i] > 180)
+    {
+        Circle c = new Circle(i * gap + gap / 2, t3.height, gap - 20, color);
+        circle.add(c);
+    }
+}
+```
 
 ## Theme 4
+In this theme I use another file `Bubble.java` to help me generate lots of bubbles. I create an `ArrayList` of bubble first, and form new bubble if the music has voice. Bubbles are appear at the top round point, and goes down, the x-coordinates is also changed randomly.
 
 # What I am most proud of in the assignment
 
