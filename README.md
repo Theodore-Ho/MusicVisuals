@@ -73,9 +73,10 @@ for(int i = 0 ; i < t3.getSmoothedBands().length ; i ++)
 ```
 
 ## Theme 4
-In this theme I use another file `Bubble.java` to help me generate lots of bubbles. I create an `ArrayList` of bubble first, and form new bubble if the music has voice. Bubbles are appear at the top round point, and goes down, the x-coordinates is also changed randomly.
+In this theme I use another file `Bubble.java` to help me generate lots of bubbles. I create an `ArrayList` of bubble first, and form new bubble if the music has voice. I use `getSmoothedBands()[1] > 0` to express this. Bubbles are appear at the top round point, and goes down, the x-coordinates is also changed randomly.
 
 # What I am most proud of in the assignment
+I practiced a lot on concepts of Object Oriented during the assignment, now I understood how the object works in different classes. I'm proud of all my code is working and achieve the visual what I want. My favourate part of the assignment is the theme 3.
 
 # Youtube video
 
