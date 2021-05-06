@@ -18,7 +18,7 @@ My assignment could be controlled with both keyboard and mouse. Keyboard SPACE c
 ## Themes
 
 - **Theme1**: Rotating flower. Flower rotate and the speed is corresponding to the the amplitude, and the length of petals is also respond with amplitude.
-<img src="images/Theme1.png" width="500"/>
+<img src="images/Theme1.gif" width="500"/>
 
 - **Theme2**: Rotating polygons. Triangle with outer rectangle, pentagon, ..., tetradecagon. Each polygon has different colour and size. The rotate speed and the size is respond to the amplitude.
 <img src="images/Theme2.png" width="500"/>
@@ -30,63 +30,38 @@ My assignment could be controlled with both keyboard and mouse. Keyboard SPACE c
 <img src="images/Theme4.png" width="500"/>
 
 # How it works
+I have 10 java files in the assignment: Main, MyVisual, Theme1 - 4, Circle, Bubble, Visual and VisualException. In the `Main.java`, it calls `MyVisual.java`, and the `MyVisual.java` calls other java files. The menu and basic settings, such as `loadAudio()`, `draw()`, etc, are in the `MyVisual.java` file. And all the control operation are running in `MyVisual.java`.
+
+## Theme 1
+There are two elements in this part, one is the outer border and another is the flower. The border is responds with audio buffer use `getAudioBuffer().get(i)`. And both length and rotate speed of petals in flower are respond to `getSmoothedAmplitude()`.
+
+## Theme 2
+I use `cos()` and `sin()` in for loop to form polygons. The size and rotate speed is respond to `getSmoothedAmplitude()`. The outer polygons have faster rotate speed.
+```java
+for(int i = 3; i < 15 ; i++)
+{
+    for(int j = 1 ; j <= i ; j ++)
+    {
+		t2.rotate(rotation * i);
+        float theta = TWO_PI / (float) i;
+        float change = 50 * i * t2.getSmoothedAmplitude();
+        float radius = i * 10 + change;
+        float x1 = sin(theta * (j - 1)) * radius;
+        float y1 = cos(theta * (j - 1)) * radius;
+        float x2 = sin(theta * j) * radius;
+        float y2 = cos(theta * j) * radius;
+        float c = map(i - 3, 0, 12, 0, 255);
+        t2.stroke(c, 255, 255);
+        t2.line(0 + x1, 0 + y1, 0 + x2, 0 + y2);
+    }
+}
+```
+
+## Theme 3
+
+## Theme 4
 
 # What I am most proud of in the assignment
-
-# Markdown Tutorial
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
 
 # Youtube video
 
