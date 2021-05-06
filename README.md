@@ -17,10 +17,10 @@ My assignment could be controlled with both keyboard and mouse. Keyboard SPACE c
 
 ## Themes
 
-- <span style="font-weight:bold">Theme1</span>: Rotating flower. Flower rotate and the speed is corresponding to the the amplitude, and the length of petals is also respond with amplitude.
+- **Theme1**: Rotating flower. Flower rotate and the speed is corresponding to the the amplitude, and the length of petals is also respond with amplitude.
 <img src="images/Theme1.png" width="500"/>
 
-- <span style="font-weight:bold">Theme2</span>: Rotating polygons. Triangle with outer rectangle, pentagon, ..., tetradecagon. Each polygon has different colour and size. The rotate speed and the size is respond to the amplitude.
+- **Theme2**: Rotating polygons. Triangle with outer rectangle, pentagon, ..., tetradecagon. Each polygon has different colour and size. The rotate speed and the size is respond to the amplitude.
 <img src="images/Theme2.png" width="500"/>
 
 # How it works
