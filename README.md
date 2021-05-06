@@ -23,6 +23,12 @@ My assignment could be controlled with both keyboard and mouse. Keyboard SPACE c
 - **Theme2**: Rotating polygons. Triangle with outer rectangle, pentagon, ..., tetradecagon. Each polygon has different colour and size. The rotate speed and the size is respond to the amplitude.
 <img src="images/Theme2.png" width="500"/>
 
+- **Theme3**: Pitch-circles. This theme divides the music into 9 pitches, when the pitch is playing, the corresponding position generates a circle and the circle goes up.
+<img src="images/Theme3.png" width="500"/>
+
+- **Theme4**: Raining. 7 group of different color bubbles generates respond to the amplitude. Bubbles goes down and swing left and right, look like raining.
+<img src="images/Theme4.png" width="500"/>
+
 # How it works
 
 # What I am most proud of in the assignment
