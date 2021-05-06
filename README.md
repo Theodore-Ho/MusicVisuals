@@ -13,15 +13,15 @@ This assignment is about music visualisation. I created 4 themes that responds t
 ## Control
 
 My assignment could be controlled with both keyboard and mouse. Keyboard SPACE controls the music start or pause. This could also control with the mouse click. In the menu area, I drawed a start/pause and a rewind button, and 4 buttons for every theme. Rewind and theme choose can only control by mouse click.
-<img src="images/Menu.png" width="200"/>
+<img src="images/Menu.png" width="500"/>
 
 ## Themes
 
 - Theme1: Rotating flower. Flower rotate and the speed is corresponding to the the amplitude, and the length of petals is also respond with amplitude.
-![An image](images/Theme1.png)
+<img src="images/Theme1.png" width="500"/>
 
 - Theme2: Rotating polygons. Triangle with outer rectangle, pentagon, ..., tetradecagon. Each polygon has different colour and size. The rotate speed and the size is respond to the amplitude.
-![An image](images/Theme2.png)
+<img src="images/Theme2.png" width="500"/>
 
 # How it works
 
