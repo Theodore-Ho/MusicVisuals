@@ -36,7 +36,7 @@ I have 10 java files in the assignment: Main, MyVisual, Theme1 - 4, Circle, Bubb
 There are two elements in this part, one is the outer border and another is the flower. The border is responds with audio buffer use `getAudioBuffer().get(i)`. And both length and rotate speed of petals in flower are responding to `getSmoothedAmplitude()`.
 
 ## Theme 2
-I use `cos()` and `sin()` in for loop to form polygons. The size and rotate speed responds to `getSmoothedAmplitude()`. The outer polygons have a faster rotation speed.
+I use `cos()` and `sin()` in for loop to generate polygons. The size and rotate speed responds to `getSmoothedAmplitude()`. The outer polygons have a faster rotation speed.
 ```java
 for(int i = 3; i < 15 ; i++)
 {
@@ -58,7 +58,7 @@ for(int i = 3; i < 15 ; i++)
 ```
 
 ## Theme 3
-In this theme, I use another file `Circle.java` to help me generate lots of circles. I create an `ArrayList` of the circle first and form a new circle if the pitch voice is obvious. The circles go up, and the size became small and small.
+In this theme, I use another file `Circle.java` to help me generate lots of circles. I create an `ArrayList` of the circle first and generate a new circle if the pitch voice is obvious. The circles go up, and the size became small and small.
 
 ```java
 for(int i = 0 ; i < t3.getSmoothedBands().length ; i ++)
@@ -73,7 +73,7 @@ for(int i = 0 ; i < t3.getSmoothedBands().length ; i ++)
 ```
 
 ## Theme 4
-In this theme, I use another file `Bubble.java` to help me generate lots of bubbles. I create an `ArrayList` of bubble first and form a new bubble if the music has a voice. I use `getSmoothedBands()[1] > 0` to express this. Bubbles appear at the top round point, and go down, the x-coordinates are also changed randomly.
+In this theme, I use another file `Bubble.java` to help me generate lots of bubbles. I create an `ArrayList` of bubble first and generate a new bubble if the music has a voice. I use `getSmoothedBands()[1] > 0` to express this. Bubbles appear at the top round points, and go down, the x-coordinates are also changed randomly.
 
 # What I am most proud of in the assignment
 I practiced a lot on concepts of Object Oriented during the assignment, now I understood how the object works in different classes. I'm proud of all my code is working and achieve the visual that I want. My favorite part of the assignment is theme 3.
